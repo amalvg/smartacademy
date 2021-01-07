@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Academy</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h6><b><span style="color:red">*</span> Required Fields</b></h6>
+    <form method="post" enctype="multipart/form-data" class="p-3 shadow">
+        <div class="form-group row">
+            {% csrf_token %}
+            <label class="col-sm-2 col-form-label">Enter your Name <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" placeholder="Name">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your Address <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="address" placeholder="Address in single line with comma(,)">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your DOB <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" name="dob" placeholder="Date of Birth"><br>
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your Mobile Number <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="mob" placeholder="Mobile Number">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your Qualification <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="qual" placeholder="Qualification">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your Email Id <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="email" placeholder="Email ID">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your Parent's Name <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="pname" placeholder="Parent's Name">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter your Parent's Number <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="pmob" placeholder="Parent's Mobile Number">
+            </div>
+            <label class="col-sm-2 col-form-label">Enter the course opting <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="course" placeholder="Course opting">
+            </div>
+            <label class="col-sm-2 col-form-label">Upload your latest image <span style="color:red">*</span></label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" name="img" placeholder="Image">
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            I hereby declare that the information given above are true and correct to the best of my knowledge, and I shall abide by the rules and regulations of Smart Academy.
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-20 col-form-label">
+                        <button type="submit" class="btn btn-primary">Preview</button>
+                    </div>
+                </div>
+            </div>
+    </form>
+</div>
+
+
+</body>
+</html>
+{% endblock %}
